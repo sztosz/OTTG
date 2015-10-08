@@ -2,8 +2,9 @@ from django.core.urlresolvers import resolve
 from django.http import HttpRequest
 from django.template.loader import render_to_string
 from django.test import TestCase
-from .views import home_page
+
 from .models import Item
+from .views import home_page
 
 
 class HomePageTest(TestCase):
@@ -17,6 +18,7 @@ class HomePageTest(TestCase):
         expected_html = render_to_string('home.html')
 
         self.assertEqual(response.content.decode(), expected_html)
+
 
 class ItemModelTest(TestCase):
     def test_saving_and_retrieving_items(self):
