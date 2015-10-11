@@ -7,4 +7,4 @@ class List(models.Model):
 
 class Item(models.Model):
     text = models.TextField(default='')
-    to_do_list = models.ForeignKey(List, default=None)
+    to_do_list = models.ForeignKey(List, default=1)
