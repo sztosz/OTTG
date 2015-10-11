@@ -5,6 +5,7 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
+
     dependencies = [
         ('lists', '0003_list'),
     ]
@@ -13,6 +14,6 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='item',
             name='to_do_list',
-            field=models.ForeignKey(default=None, to='lists.List'),
+            field=models.ForeignKey(to='lists.List', default=1),
         ),
     ]
